@@ -1,7 +1,11 @@
 package com.auta;
 
 import com.facebook.react.ReactActivity;
+import com.facebook.react.shell.MainReactPackage;
 import com.auta.CustomMlPackage;
+import java.util.List;
+import com.facebook.react.ReactPackage;
+import java.util.Arrays;
 
 public class MainActivity extends ReactActivity {
 
@@ -17,6 +21,6 @@ public class MainActivity extends ReactActivity {
     protected List<ReactPackage> getPackages() {
         return Arrays.<ReactPackage>asList(
                 new MainReactPackage(),
-                new CustomToastPackage());
+                new CustomMlPackage());
     }
 }
