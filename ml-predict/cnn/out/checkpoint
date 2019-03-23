@@ -1,0 +1,2 @@
+model_checkpoint_path: "FocusClassifier.chkp"
+all_model_checkpoint_paths: "FocusClassifier.chkp"

@@ -1,6 +1,7 @@
 package com.auta;
 
 import com.facebook.react.ReactActivity;
+import com.auta.CustomMlPackage;
 
 public class MainActivity extends ReactActivity {
 
@@ -11,5 +12,11 @@ public class MainActivity extends ReactActivity {
     @Override
     protected String getMainComponentName() {
         return "Auta";
+    }
+
+    protected List<ReactPackage> getPackages() {
+        return Arrays.<ReactPackage>asList(
+                new MainReactPackage(),
+                new CustomToastPackage());
     }
 }
