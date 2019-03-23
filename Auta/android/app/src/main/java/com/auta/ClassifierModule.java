@@ -1,4 +1,4 @@
-package com.auta
+package com.auta;
 
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -18,11 +18,11 @@ public class ClassifierModule extends ReactContextBaseJavaModule {
     private static final String PB_ADDRESS = "frozen_DistractionClassifier.pb";
     private final String[] LABELS = {"Concentrated", "Depressed", "Distracted", "Sleepy"};
     String input = "conv2d_1_input", output = "activation_5/Sigmoid";
-    private static final WIDTH = 64, HEIGHT = 64;
+    private static final int WIDTH = 64, HEIGHT = 64;
     final int NUM_OUTPUT_CLASSES = 4;
 
     public ClassifierModule(ReactApplicationContext reactContext){
-        super (reactContext)
+        super(reactContext);
         inferenceInterface = new TensorFlowInferenceInterface(getAssets(), PB_ADDRESS);
     }
 
