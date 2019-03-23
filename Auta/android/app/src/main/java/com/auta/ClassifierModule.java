@@ -29,7 +29,8 @@ public class ClassifierModule extends ReactContextBaseJavaModule {
         return "Classifier";
     }
 
-    public String classify(Bitmap bmp){
+    @ReactMethod
+    public void classify(Bitmap bmp){
         // Take a bitmap and change it into a float array
         assert bmp.getWidth() == WIDTH && bmp.getHeight() == HEIGHT;
 
@@ -67,7 +68,7 @@ public class ClassifierModule extends ReactContextBaseJavaModule {
             maxI = (max > prediction[i]) ? maxI : i;
         }
 
-        return = LABELS[maxI];
+        successCallback.invoke(LABELS[maxI]);
     }
 
     private float[] predict(float[] inputArray){
