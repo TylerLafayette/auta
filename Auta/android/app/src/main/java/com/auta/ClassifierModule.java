@@ -1,4 +1,4 @@
-package com.auta
+package com.auta;
 
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
