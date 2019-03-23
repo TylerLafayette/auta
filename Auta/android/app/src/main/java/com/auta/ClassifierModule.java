@@ -1,10 +1,11 @@
-package com.auta
+package com.auta;
 
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
+import com.facebook.react.bridge.Callback;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -30,7 +31,7 @@ public class ClassifierModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void classify(Bitmap bmp){
+    public void classify(Bitmap bmp, Callback errorCallback, Callback successCallback){
         // Take a bitmap and change it into a float array
         assert bmp.getWidth() == WIDTH && bmp.getHeight() == HEIGHT;
 
