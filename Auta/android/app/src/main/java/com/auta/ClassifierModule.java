@@ -35,8 +35,9 @@ public class ClassifierModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void classify(Base64 decodedString, Callback errorCallback, Callback successCallback){
-        Bitmap bmp = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length());
+    public void classify(Base64 base64Image, Callback errorCallback, Callback successCallback){
+        byte[] decodedString = Base64.decode(base64Image, Base64.DEFAULT);
+        Bitmap bmp = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
         // Take a bitmap and change it into a float array
         assert bmp.getWidth() == WIDTH && bmp.getHeight() == HEIGHT;
 
