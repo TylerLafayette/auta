@@ -9,8 +9,8 @@ import com.facebook.react.bridge.Callback;
 
 import java.util.Map;
 import java.util.HashMap;
-import java.util.Base64;
 
+import android.util.Base64;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
