@@ -27,7 +27,7 @@ public class ClassifierModule extends ReactContextBaseJavaModule {
 
     public ClassifierModule(ReactApplicationContext reactContext){
         super(reactContext);
-        inferenceInterface = new TensorFlowInferenceInterface(getAssets(), PB_ADDRESS);
+        inferenceInterface = new TensorFlowInferenceInterface(reactContext.getAssets(), PB_ADDRESS);
     }
 
     public String getName(){
