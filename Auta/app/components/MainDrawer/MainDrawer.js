@@ -16,18 +16,20 @@ import { closeDrawer } from "../../actions/uiActions"
 export default class MainDrawer extends Component {
     render() {
         return (
-            <View
-                style={styles.wrapper}
-            >
-                <Navbar icon={"close"} onPress={() => this.props.dispatch(closeDrawer())} />
-                <View style={styles.links}>
-                    {["CHAT", "STUDY", "HISTORY"].map((item, i) => (
-                        <Link component={TouchableWithoutFeedback} style={styles.link} to={`/${item == "CHAT" ? "" : item.toLowerCase()}`}>
-                            <Text style={styles.link}>{item}</Text>
-                        </Link>
-                    ))}
+            <TouchableWithoutFeedback onPress={() => this.props.dispatch(closeDrawer())}>
+                <View
+                    style={styles.wrapper}
+                >
+                    <Navbar icon={"close"} onPress={() => this.props.dispatch(closeDrawer())} />
+                    <View style={styles.links}>
+                        {["CHAT", "STUDY", "HISTORY"].map((item, i) => (
+                            <Link component={TouchableWithoutFeedback} style={styles.link} to={`/${item == "CHAT" ? "" : item.toLowerCase()}`}>
+                                <Text style={styles.link}>{item}</Text>
+                            </Link>
+                        ))}
+                    </View>
                 </View>
-            </View>
+            </TouchableWithoutFeedback>
         )
     }
 }

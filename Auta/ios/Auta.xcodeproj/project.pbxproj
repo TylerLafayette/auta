@@ -54,7 +54,9 @@
 		972F8DD18EAC4B4B8E4AAF19 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E976A1F74084790BF5D2CF6 /* Octicons.ttf */; };
 		0E9EB30BF3F6460BAA9F5763 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A38C314C197406A8460A667 /* SimpleLineIcons.ttf */; };
 		A704741FB45F467891CD9F62 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD23AE8C70DD42BE86C12EAC /* Zocial.ttf */; };
-		3431F41154764B5E866B6496 /* libReactNativeCameraKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0B58EE880B843799E98C3B6 /* libReactNativeCameraKit.a */; };
+		2DEE7ACABAE14B0FB3F2BD9F /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 880DC3C7066746B89EFC84BA /* libBVLinearGradient.a */; };
+		A4D0AAE7266D42C5A0F4F1C0 /* libRNCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B276F3CDF92C4FE6B7EBFAE4 /* libRNCamera.a */; };
+		899C88696378480381A2F7FB /* libRNOpenCV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D0D7024CE664E0FBBDE5067 /* libRNOpenCV.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -378,8 +380,12 @@
 		6E976A1F74084790BF5D2CF6 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		1A38C314C197406A8460A667 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		DD23AE8C70DD42BE86C12EAC /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E08787B8097F4C4FA4261C48 /* ReactNativeCameraKit.xcodeproj */ = {isa = PBXFileReference; name = "ReactNativeCameraKit.xcodeproj"; path = "../node_modules/react-native-camera-kit/ios/lib/ReactNativeCameraKit.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		A0B58EE880B843799E98C3B6 /* libReactNativeCameraKit.a */ = {isa = PBXFileReference; name = "libReactNativeCameraKit.a"; path = "libReactNativeCameraKit.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		586E923DD0AF4B3D91FEB445 /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; name = "BVLinearGradient.xcodeproj"; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		880DC3C7066746B89EFC84BA /* libBVLinearGradient.a */ = {isa = PBXFileReference; name = "libBVLinearGradient.a"; path = "libBVLinearGradient.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		510C7D316D4A4BF3B2366152 /* RNCamera.xcodeproj */ = {isa = PBXFileReference; name = "RNCamera.xcodeproj"; path = "../node_modules/react-native-camera/ios/RNCamera.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		B276F3CDF92C4FE6B7EBFAE4 /* libRNCamera.a */ = {isa = PBXFileReference; name = "libRNCamera.a"; path = "libRNCamera.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		676A666613E14773ADD65B85 /* RNOpenCV.xcodeproj */ = {isa = PBXFileReference; name = "RNOpenCV.xcodeproj"; path = "../node_modules/@tylerlafayette/react-native-opencv/ios/RNOpenCV.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		1D0D7024CE664E0FBBDE5067 /* libRNOpenCV.a */ = {isa = PBXFileReference; name = "libRNOpenCV.a"; path = "libRNOpenCV.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,7 +414,9 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				78DF092D6E3D475F85574CBE /* libRNVectorIcons.a in Frameworks */,
-				3431F41154764B5E866B6496 /* libReactNativeCameraKit.a in Frameworks */,
+				2DEE7ACABAE14B0FB3F2BD9F /* libBVLinearGradient.a in Frameworks */,
+				A4D0AAE7266D42C5A0F4F1C0 /* libRNCamera.a in Frameworks */,
+				899C88696378480381A2F7FB /* libRNOpenCV.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,7 +605,9 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				BD497509A50B430084A82A54 /* RNVectorIcons.xcodeproj */,
-				E08787B8097F4C4FA4261C48 /* ReactNativeCameraKit.xcodeproj */,
+				586E923DD0AF4B3D91FEB445 /* BVLinearGradient.xcodeproj */,
+				510C7D316D4A4BF3B2366152 /* RNCamera.xcodeproj */,
+				676A666613E14773ADD65B85 /* RNOpenCV.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1266,12 +1276,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-camera-kit/ios/lib/ReactNativeCameraKit",
+					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
+					"$(SRCROOT)/../node_modules/@tylerlafayette/react-native-opencv/ios",
 				);
 			};
 			name = Debug;
@@ -1295,12 +1306,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-camera-kit/ios/lib/ReactNativeCameraKit",
+					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
+					"$(SRCROOT)/../node_modules/@tylerlafayette/react-native-opencv/ios",
 				);
 			};
 			name = Release;
@@ -1324,7 +1336,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-camera-kit/ios/lib/ReactNativeCameraKit",
+					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
+					"$(SRCROOT)/../node_modules/@tylerlafayette/react-native-opencv/ios",
 				);
 			};
 			name = Debug;
@@ -1347,7 +1361,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-camera-kit/ios/lib/ReactNativeCameraKit",
+					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
+					"$(SRCROOT)/../node_modules/@tylerlafayette/react-native-opencv/ios",
 				);
 			};
 			name = Release;
@@ -1379,12 +1395,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-camera-kit/ios/lib/ReactNativeCameraKit",
+					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
+					"$(SRCROOT)/../node_modules/@tylerlafayette/react-native-opencv/ios",
 				);
 			};
 			name = Debug;
@@ -1416,12 +1433,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-camera-kit/ios/lib/ReactNativeCameraKit",
+					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
+					"$(SRCROOT)/../node_modules/@tylerlafayette/react-native-opencv/ios",
 				);
 			};
 			name = Release;
@@ -1452,12 +1470,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-camera-kit/ios/lib/ReactNativeCameraKit",
+					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
+					"$(SRCROOT)/../node_modules/@tylerlafayette/react-native-opencv/ios",
 				);
 			};
 			name = Debug;
@@ -1488,12 +1507,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-camera-kit/ios/lib/ReactNativeCameraKit",
+					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
+					"$(SRCROOT)/../node_modules/@tylerlafayette/react-native-opencv/ios",
 				);
 			};
 			name = Release;
