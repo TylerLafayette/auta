@@ -19,8 +19,8 @@ export default class Navbar extends Component {
     render() {
         return (
             <View style={styles.navbarWrapper}>
-                <TouchableWithoutFeedback onPress={this._openDrawer.bind(this)} style={styles.icon}>
-                    <Icon name="menu" size={28}></Icon>
+                <TouchableWithoutFeedback onPress={this.props.onPress ? this.props.onPress : this._openDrawer.bind(this)} style={styles.icon}>
+                    <Icon name={this.props.icon ? this.props.icon : "menu"} size={28}></Icon>
                 </TouchableWithoutFeedback>
                 <Text style={styles.title}>AUTA</Text>
                 <View style={styles.placeholder}>
