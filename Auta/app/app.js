@@ -1,11 +1,21 @@
 import React, { Component } from "react"
 import { AsyncStorage, View, Text, StatusBar, ActivityIndicator } from "react-native"
 import { withRouter, NativeRouter, Switch, Route, AndroidBackButton, Alert, Link } from "react-router-native"
+import Drawer from "react-native-drawer"
+import { Provider, connect } from "react-redux"
+import store from "./store"
 
 import Classifier from "./modules/Classifier"
 
 import Navbar from "./components/Navbar"
+import MainDrawer from "./components/MainDrawer"
+import Home from "./screens/Home"
 
+@connect(store => {
+    return {
+        ui: store.ui
+    }
+})
 class App extends Component {
     constructor() {
         super()
@@ -28,13 +38,27 @@ class App extends Component {
                 backgroundColor: "#FFFFFF",
                 flex: 1
             }}>
-                <StatusBar backgroundColor={"#FFFFFF"} barStyle={"dark-content"} />
-                <Navbar />
-                <AndroidBackButton>
-                    <Switch>
-                        <Route exact path="/" component={() => <Text>Hello</Text>} />
-                    </Switch>
-                </AndroidBackButton>
+                <Drawer
+                    ref={(ref) => this._drawer = ref}
+                    open={this.props.ui.drawerOpen}
+                    content={<MainDrawer />}
+                    type="overlay"
+                    tapToClose={true}
+                    openDrawerOffset={0.2}
+                    panCloseMask={0.2}
+                    closedDrawerOffset={-3}
+                    tweenHandler={(ratio) => ({
+                        main: { opacity:(2-ratio)/2 }
+                    })}
+                >
+                    <StatusBar backgroundColor={"#FFFFFF"} barStyle={"dark-content"} />
+                    <Navbar />
+                    <AndroidBackButton>
+                        <Switch>
+                            <Route exact path="/" component={Home} />
+                        </Switch>
+                    </AndroidBackButton>
+                </Drawer>
             </View>
         )
     }
@@ -45,9 +69,11 @@ App = withRouter(App)
 export default class Index extends Component {
     render() {
         return (
-            <NativeRouter>
-                <App></App>
-            </NativeRouter>
+            <Provider store={store}>
+                <NativeRouter>
+                    <App></App>
+                </NativeRouter>
+            </Provider>
         )
     }
 }
