@@ -6,7 +6,7 @@
  - A chat bot that uses analysis to detect your mental health
 
 ## The Team
- - Tyler Lafayette - Frontend
- - Kevin Rossel - Backend
- - Kevin Chu - Machine Learning
- - Zachary Wang - Web development and presentation
+ - Tyler Lafayette - Frontend, general backend.
+ - Kevin Rossel - Sentiment analysis implementation an web development.
+ - Kevin Chu - Machine learning and bug fixing.
+ - Zachary Wang - Web development and presentation.
