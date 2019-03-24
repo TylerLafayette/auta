@@ -1,41 +1,30 @@
 export default function(state={
     messages: [
-        {
-            id: 1289337892374238,
-            timestamp: 1553400915600,
-            text: "Absolutely! Tell me anything you want.",
-            receiving: true,
-        },
-        {
-            id: 1289347892374238,
-            timestamp: 1553400915598,
-            text: "Can I vent?",
-            receiving: false,
-        },
     ],
+    currentChatStage: "",
     suggestions: [
         {
             id: 0,
-            label: "Yes, please."
+            label: "Log today."
         },
         {
             id: 1,
-            label: "No, thanks."
+            label: "Help me relax."
         }
     ]
 }, action) {
     switch(action.type) {
         case "PUSH_MESSAGES": {
-            return {...state, messages: [...messages, ...action.payload]}
+            return {...state, messages: [...action.payload, ...state.messages]}
         }
         case "REMOVE_MESSAGE": {
             return {...state, messages: state.messages.filter(x => x.id != action.payload)}
         }
         case "PUSH_SUGGESTIONS": {
-            return {...state, suggestions: [...action.payload, ...suggestions]}
+            return {...state, suggestions: [...action.payload, ...state.suggestions]}
         }
         case "REMOVE_SUGGESTION": {
-            return {...state, suggestions: suggestions.filter(x => x.id != action.payload)}
+            return {...state, suggestions: state.suggestions.filter(x => x.id != action.payload)}
         }
         case "CLEAR_SUGGESTIONS": {
             return {...state, suggestions: []}

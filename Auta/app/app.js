@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar"
 import MainDrawer from "./components/MainDrawer"
 import Home from "./screens/Home"
 import Study from "./screens/Study"
+import History from "./screens/History"
 
 @connect(store => {
     return {
@@ -60,6 +61,7 @@ class App extends Component {
                         <Switch>
                             <Route exact path="/" component={Home} />
                             <Route exact path="/study" component={Study} />
+                            <Route exact path="/history" component={History} />
                         </Switch>
                     </AndroidBackButton>
                 </Drawer>

@@ -16,6 +16,7 @@ export default class ChatView extends Component {
             <View style={styles.wrapper}>
                 <FlatList
                     data={this.props.chat.messages}
+                    keyExtractor={(item, index) => item.id}
                     renderItem={({item}) => <ChatBubble receiving={item.receiving}>{item.text}</ChatBubble>}
                     inverted={true}
                 />
