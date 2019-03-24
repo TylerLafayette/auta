@@ -4,10 +4,13 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
+import com.facebook.react.bridge.JavaScriptModule;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import com.auta.CustomMlPackage;
 
 public class CustomMlPackage implements ReactPackage {
 
@@ -24,6 +27,11 @@ public class CustomMlPackage implements ReactPackage {
         modules.add(new ClassifierModule(reactContext));
 
         return modules;
+    }
+
+    // Backward compatibility
+    public List<Class<? extends JavaScriptModule>> createJSModules() {
+        return new ArrayList<>();
     }
 
 }

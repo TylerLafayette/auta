@@ -19,7 +19,7 @@ import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
 public class ClassifierModule extends ReactContextBaseJavaModule {
 
     private static TensorFlowInferenceInterface inferenceInterface;
-    private static final String PB_ADDRESS = "frozen_DistractionClassifier.pb";
+    private static final String PB_ADDRESS = "frozen_FocusClassifier.pb";
     private final String[] LABELS = {"Concentrated", "Depressed", "Distracted", "Sleepy"};
     String input = "conv2d_1_input", output = "activation_5/Sigmoid";
     private static final int WIDTH = 64, HEIGHT = 64;
@@ -30,52 +30,54 @@ public class ClassifierModule extends ReactContextBaseJavaModule {
         inferenceInterface = new TensorFlowInferenceInterface(reactContext.getAssets(), PB_ADDRESS);
     }
 
+    @Override
     public String getName(){
         return "Classifier";
     }
 
     @ReactMethod
     public void classify(String base64Image, Callback errorCallback, Callback successCallback){
-        byte[] decodedString = Base64.decode(base64Image, Base64.DEFAULT);
-        Bitmap bmp = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-        // Take a bitmap and change it into a float array
-        assert bmp.getWidth() == WIDTH && bmp.getHeight() == HEIGHT;
+//        byte[] decodedString = Base64.decode(base64Image, Base64.DEFAULT);
+//        Bitmap bmp = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+//        // Take a bitmap and change it into a float array
+//        assert bmp.getWidth() == WIDTH && bmp.getHeight() == HEIGHT;
+//
+//        int[] pixels = new int[WIDTH*HEIGHT];
+//        float[] brightness = new float[WIDTH*HEIGHT];
+//        float[] r = new float[WIDTH*HEIGHT];
+//        float[] g = new float[WIDTH*HEIGHT];
+//        float[] b = new float[WIDTH*HEIGHT];
+//
+//        bmp.getPixels(pixels, 0, WIDTH, 0, 0, WIDTH, HEIGHT);
+//
+//        for (int i = 0; i < pixels.length; i++) {
+//            r[i] = ((pixels[i]) >> 16 & 0xff)/255.0f;
+//            g[i] = ((pixels[i]) >> 8 & 0xff)/255.0f;
+//            b[i] = ((pixels[i]) & 0xff)/255.0f;
+//        }
+//
+//        float[] inputArray = new float[3*WIDTH*HEIGHT];
+//
+//        for (int i=0;i<WIDTH*HEIGHT;i++) {
+//            inputArray[(3*i)] = r[i];
+//            inputArray[(3*i)+1] = g[i];
+//            inputArray[(3*i)+2] = b[i];
+//        }
+//
+//        // Make a prediction with the image
+//        float[] prediction = predict(inputArray);
+//
+//        // form prediction from labels
+//        float max = 0.0f;
+//        int maxI = 0;
+//
+//        for (int i=0;i<prediction.length;i++){
+//            max = (max > prediction[i]) ? max : prediction[i];
+//            maxI = (max > prediction[i]) ? maxI : i;
+//        }
 
-        int[] pixels = new int[WIDTH*HEIGHT];
-        float[] brightness = new float[WIDTH*HEIGHT];
-        float[] r = new float[WIDTH*HEIGHT];
-        float[] g = new float[WIDTH*HEIGHT];
-        float[] b = new float[WIDTH*HEIGHT];
-
-        bmp.getPixels(pixels, 0, WIDTH, 0, 0, WIDTH, HEIGHT);
-
-        for (int i = 0; i < pixels.length; i++) {
-            r[i] = ((pixels[i]) >> 16 & 0xff)/255.0f;
-            g[i] = ((pixels[i]) >> 8 & 0xff)/255.0f;
-            b[i] = ((pixels[i]) & 0xff)/255.0f;
-        }
-
-        float[] inputArray = new float[3*WIDTH*HEIGHT];
-
-        for (int i=0;i<WIDTH*HEIGHT;i++) {
-            inputArray[(3*i)] = r[i];
-            inputArray[(3*i)+1] = g[i];
-            inputArray[(3*i)+2] = b[i];
-        }
-
-        // Make a prediction with the image
-        float[] prediction = predict(inputArray);
-
-        // form prediction from labels
-        float max = 0.0f;
-        int maxI = 0;
-
-        for (int i=0;i<prediction.length;i++){
-            max = (max > prediction[i]) ? max : prediction[i];
-            maxI = (max > prediction[i]) ? maxI : i;
-        }
-
-        successCallback.invoke(LABELS[maxI]);
+//        successCallback.invoke(LABELS[maxI]);
+        successCallback.invoke("j");
     }
 
     private float[] predict(float[] inputArray){
