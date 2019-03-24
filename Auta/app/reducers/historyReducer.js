@@ -2,6 +2,8 @@ export default function(state={
     items: [
         {
             type: "s",
+            startTime: Date.now(),
+            endTime: Date.now() + 60000,
             items: [ "Depression", "Concentration", "Distracted" ]
         },
         {

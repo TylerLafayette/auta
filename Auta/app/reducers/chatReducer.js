@@ -29,6 +29,9 @@ export default function(state={
         case "CLEAR_SUGGESTIONS": {
             return {...state, suggestions: []}
         }
+        case "SWITCH_CONTEXT": {
+            return {...state, currentChatStage: action.payload}
+        }
         default: {
             return {...state}
         }

@@ -55,17 +55,21 @@ export default class Study extends Component {
         }]))
         this.props.dispatch(pushHistory({
             type: "s",
-            items: this.props.study.events.map(x => x.mood)
+            items: this.props.study.events.map(x => x.mood),
+            startTime: this.props.study.startTime,
+            endTime: Date.now()
         }))
     }
     asyncTakePic = async () => {
+        console.log(this.camera)
+        if(!this.camera.state.isAuthorizationChecked) return
         console.log("taking a picture")
         const options = { quality: 0.5, base64: true }
         const data = await this.camera.takePictureAsync(options)
         Classifier.classify(data.base64,
             console.log, 
             i => this.props.dispatch(pushEvent({
-                mood: i,
+                mood: i.toLowerCase() == "distracted" || i.toLowerCase() == "sleepy" ? "Not Focused" : "Focused",
                 timestamp: Date.now()
             }))
         )
