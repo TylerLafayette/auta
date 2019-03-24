@@ -6,7 +6,7 @@
  - A chat bot that uses analysis to detect your mental health
 
 ## The Team
- - Tyler Laffayete - Frontend
+ - Tyler Lafayette - Frontend
  - Kevin Rossel - Backend
  - Kevin Chu - Machine Learning
  - Zachary Wang - Web development and presentation
