@@ -19,7 +19,8 @@
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
     "redux-promise-middleware": "^6.1.0",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "tween-functions": "^1.2.0"
   },
   "devDependencies": {
     "babel-jest": "24.5.0",

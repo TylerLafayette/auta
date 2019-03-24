@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { AsyncStorage, View, Text, StatusBar, ActivityIndicator } from "react-native"
 import { withRouter, NativeRouter, Switch, Route, AndroidBackButton, Alert, Link } from "react-router-native"
 import Drawer from "react-native-drawer"
+import tweenFunctions from "tween-functions"
 import { Provider, connect } from "react-redux"
 import store from "./store"
 
@@ -10,6 +11,7 @@ import Classifier from "./modules/Classifier"
 import Navbar from "./components/Navbar"
 import MainDrawer from "./components/MainDrawer"
 import Home from "./screens/Home"
+import Study from "./screens/Study"
 
 @connect(store => {
     return {
@@ -50,12 +52,14 @@ class App extends Component {
                     tweenHandler={(ratio) => ({
                         main: { opacity:(2-ratio)/2 }
                     })}
+                    tweenEasing={"easeInOutQuad"}
                 >
                     <StatusBar backgroundColor={"#FFFFFF"} barStyle={"dark-content"} />
                     <Navbar />
                     <AndroidBackButton>
                         <Switch>
                             <Route exact path="/" component={Home} />
+                            <Route exact path="/study" component={Study} />
                         </Switch>
                     </AndroidBackButton>
                 </Drawer>
