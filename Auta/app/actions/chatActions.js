@@ -1,5 +1,5 @@
 const KNOWN_WORDS = {
-    positive: ["yes", "sure", "absolutely", "indeed", "please"],
+    positive: ["yes", "yes please", "sure", "absolutely", "indeed", "please"],
     negative: ["no", "nope", "dont"]
 }
 
@@ -47,6 +47,26 @@ export function pushMessages(messages) {
             body = body.replace(/[^A-Za-z0-9 ]/g, "")
             body = body.split(" ")
             console.log(body, ctx)
+            if(ctx.includes("YES_NO")) {
+                if(KNOWN_WORDS.positive.some(r => body.includes(r)))
+                    delayDispatch(dispatch, {
+                        type: "PUSH_MESSAGES",
+                        payload: [
+                            b(POSITIVE_RESPONSES[ctx])
+                        ]
+                    })
+                else
+                    delayDispatch(dispatch, {
+                        type: "PUSH_MESSAGES",
+                        payload: [
+                            b(NEGATIVE_RESPONSES[ctx])
+                        ]
+                    })
+                dispatch({
+                    type: "SWITCH_CONTEXT",
+                    payload: ""
+                })
+            }
             if(ctx == "PROMPT_LOG_DAY") {
                 let unmodified = x.text.toLowerCase()
                 fetch(`http://10.232.33.120/analyze?sent=${unmodified}`)
@@ -90,26 +110,6 @@ export function pushMessages(messages) {
                         type: "SWITCH_CONTEXT",
                         payload: ""
                     })
-                })
-            }
-            if(ctx.includes("YES_NO")) {
-                if(KNOWN_WORDS.positive.some(r => body.includes(r)))
-                    delayDispatch(dispatch, {
-                        type: "PUSH_MESSAGES",
-                        payload: [
-                            b(POSITIVE_RESPONSES[ctx])
-                        ]
-                    })
-                else
-                    delayDispatch(dispatch, {
-                        type: "PUSH_MESSAGES",
-                        payload: [
-                            b(NEGATIVE_RESPONSES[ctx])
-                        ]
-                    })
-                dispatch({
-                    type: "SWITCH_CONTEXT",
-                    payload: ""
                 })
             }
             if(ctx == "") {

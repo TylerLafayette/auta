@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { View, Text } from "react-native"
 import LinearGradient from "react-native-linear-gradient"
-import { RNCamera } from "react-native-camera"
+import { RNCamera, FaceDetector } from "react-native-camera"
 import { Link } from "react-router-native"
 
 import styles from "./Study.styles.js"
@@ -95,6 +95,7 @@ export default class Study extends Component {
                                 width: 1,
                                 height: 1,
                             }}
+                            onFaces
                             type={RNCamera.Constants.Type.front}
                             flashMode={RNCamera.Constants.FlashMode.off}
                             permissionDialogTitle={'Give me permission please!'}

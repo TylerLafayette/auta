@@ -93,6 +93,11 @@ def enableSeparateBuildPerCPUArchitecture = false
  */
 def enableProguardInReleaseBuilds = false
 
+def safeExtGet(prop, fallback) {
+    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+}
+
+
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
@@ -148,8 +153,6 @@ dependencies {
     implementation 'com.facebook.react:react-native:+'
     // From node_modules
     implementation 'org.tensorflow:tensorflow-android:1.5.0'
-//    implementation files('libs/stanford-corenlp-3.6.0-models.jar')
-//    implementation files('libs/ejml-0.23.jar')
 //    implementation files('libs/stanford-corenlp-3.6.0.jar')
 }
 

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "818818606126",
+    "firebase_url": "https://auta-ec0c4.firebaseio.com",
+    "project_id": "auta-ec0c4",
+    "storage_bucket": "auta-ec0c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:818818606126:android:8f20855fc831dd13",
+        "android_client_info": {
+          "package_name": "com.auta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "818818606126-9mgf2uhdqo5o042u3uhcdenuncp861mn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZhggtJe94wyVRpoGu2O8ayb0VI4wQYys"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

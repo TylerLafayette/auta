@@ -36,7 +36,7 @@ export default class History extends Component {
                                 <Text style={styles.dayText}>Good work studying!</Text>
                                 <Text style={styles.dayText}>{minutes} minute{minutes != 1 ? "s" : ""} and {seconds} second{seconds != 1 ? "s" : ""}</Text>
                                 {Object.entries(stuff).map(item => (
-                                    <Text style={styles.dayText}>{item[0]} - approximately {Math.floor(item[1] * 1.5/60)} minute{Math.floor(item[1] * 1.5/60) != 1 ? "s" : ""}</Text>
+                                    <Text style={styles.dayText}>{item[0]} - approximately {Math.floor(item[1] * 1.5/60)} minute{Math.floor(item[1] * 1.5/60) != 1 ? "s" : ""} and {Math.floor(item[1] * 1.5%60)} second{Math.floor(item[1] * 1.5%60) != 1 ? "s" : ""}</Text>
                                 ))}
                             </View>
                         : 
