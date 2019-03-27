@@ -7,7 +7,7 @@
 
 ## The Team
  - Tyler Lafayette - Frontend, general backend.
- - Kevin Rossel - Sentiment analysis implementation an web development.
+ - Kevin Rossel - Sentiment analysis implementation and web development.
  - Kevin Chu - Machine learning and bug fixing.
  - Zachary Wang - Web development and presentation.
 
