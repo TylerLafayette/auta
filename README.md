@@ -10,3 +10,6 @@
  - Kevin Rossel - Sentiment analysis implementation an web development.
  - Kevin Chu - Machine learning and bug fixing.
  - Zachary Wang - Web development and presentation.
+
+## Special Thanks!
+https://github.com/johannesharmse/distraction_detection/blob/master/src/get_data.py was the script I used to create my dataset. This repository has the MIT Liscense.
