@@ -12,4 +12,4 @@
  - Zachary Wang - Web development and presentation.
 
 ## Special Thanks!
-https://github.com/johannesharmse/distraction_detection/blob/master/src/get_data.py was the script I used to create my dataset. This repository has the MIT Liscense.
+https://github.com/johannesharmse/distraction_detection/blob/master/src/get_data.py was the script we used to create my dataset. This repository has the MIT Liscense.
