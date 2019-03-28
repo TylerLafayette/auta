@@ -15,4 +15,4 @@
 https://github.com/johannesharmse/distraction_detection/blob/master/src/get_data.py was the script we used to create my dataset. This repository has the MIT Liscense.
 
 ## Our Website
-Check out our website [here] (https://zwang695.github.io/auta.github.io/)
+Check out our website [here](https://zwang695.github.io/auta.github.io/)
