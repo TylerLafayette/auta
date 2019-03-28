@@ -4,6 +4,7 @@
 ## Features
  - OpenCV and machine learning used to track how focused you are while studying
  - A chat bot that uses sentiment analysis to detect your mental health
+ - A website (link at bottom of repo)
 
 ## The Team
  - Tyler Lafayette - Frontend, general backend.
