@@ -34,6 +34,7 @@ This project is currently open source are free for anyone to contribute. Simply 
 ## Features
  - OpenCV and machine learning used to track how focused you are while studying
  - A chat bot that uses sentiment analysis to detect your mental health
+ - A website (link at bottom of readme)
 
 ## The Team
  - **Tyler Lafayette** - *Frontend, general backend* - [TylerLafayette](https://github.com/TylerLafayette)
