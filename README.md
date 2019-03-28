@@ -1,5 +1,5 @@
 # auta
-💬 an interactive chat app to maintain good mental health and study habits (for Los Altos Hacks) here is out website https://zwang695.github.io/auta.github.io/
+💬 an interactive chat app to maintain good mental health and study habits (for Los Altos Hacks) here is our website https://zwang695.github.io/auta.github.io/
 
 ## Features
  - OpenCV and machine learning used to track how focused you are while studying
