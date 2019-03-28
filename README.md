@@ -44,7 +44,7 @@ This project is currently open source are free for anyone to contribute. Simply 
  - **Zachary Wang** - *Web development and presentation* - [zwang695](https://github.com/zwang695)
 
 ## Special Thanks!
-https://github.com/johannesharmse/distraction_detection/blob/master/src/get_data.py was the script we used to create my dataset. This repository has the MIT Liscense.
+[This](https://github.com/johannesharmse/distraction_detection/blob/master/src/get_data.py) was the script we used to create my dataset. This repository has the MIT Liscense.
 
 ## Our Website
 Check out our website [here](https://zwang695.github.io/auta.github.io/)!
