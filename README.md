@@ -1,8 +1,6 @@
 # auta
 💬 an interactive chat app to maintain good mental health and study habits (for Los Altos Hacks)
 
-# Usage
-
 ### Prerequisites
 
 Make sure you have all the libraries installed.
